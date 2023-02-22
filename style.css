@@ -1,0 +1,414 @@
+/* Universal */
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    scroll-behavior: smooth;
+}
+.kontainer{
+    width: 90%;
+    margin: 0 auto;
+}
+.kontainer:after{
+    Content: ' ';
+    Display: block;
+    Clear: both;
+}
+::-webkit-scrollbar{
+    width: 12px;
+}
+::-webkit-scrollbar-thumb{
+    background-color:#1b2143;
+    border-radius: 6px;
+}
+/* Navbar */
+a{
+    color: inherit;
+    text-decoration: none;
+}
+header h1{
+    float: left ;
+    padding: 20px;
+    color: azure;
+    z-index: 20;
+}
+img{
+    width: 150px;
+
+}
+.navbar ul{
+    float: right;
+}
+.navbar ul li {
+    display: inline-block;
+}
+.navbar ul li a{
+    padding: 25px 20px;
+    display: inline-block;
+    color:#fff 
+}
+header ul li a:hover{
+    display: block;
+    color: #fff;
+}
+header ul li a:hover{
+    color: #1aeeef;
+}
+header ul li a {
+    transition: 0.3s;
+}
+#header {
+    position: fixed;
+    background-image:linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7));
+    border-bottom: 2px solid white;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    z-index: 10;
+  }
+
+/* Banner */
+.banner {
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-image 0.2s ease-in-out;
+    animation: changeBackground 20s infinite;
+}
+@keyframes changeBackground {
+    0% {
+      background-image: url(gambar/banner5.png);
+    }
+    20% {
+      background-image: url(gambar/banner.png);
+    }
+    40% {
+      background-image: url(gambar/banner2.png);
+    }
+    60% {
+        background-image: url(gambar/banner3.png);
+      }
+    80% {
+        background-image: url(gambar/banner4.png);
+      }
+    100% {
+      background-image: url(gambar/banner5.png);
+    }
+    
+  }
+.banner h2{
+    color: #fff;
+    font-size: 24.2px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
+}
+.banner p{
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom :70px;
+}
+section{
+    padding: 203px ;
+}
+#banner{
+    text-align: center;
+}
+
+
+/* button */
+.button {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: white;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+.button:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    box-shadow: 5px 10px#5d5fef;
+}
+.button:active {
+    color: #fff
+    
+}
+.button:active:after {
+    background: transparent;
+}
+.button:hover:before {
+    opacity: 1;
+}
+.button:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image:linear-gradient(to right,#1aeeef,blue) ;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    box-shadow: 1px #5d5fef;
+}
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+/* Penjelasan */
+.about{
+    background-color: #000;
+    position: relative;
+    width: 176.vh;
+    height: auto;
+    min-width: 70vh;
+    padding: 0px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid white;
+}
+.about img{
+    height: 50%;
+    width: 30%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.about .contentBx{
+    width: 50%;
+    margin: 100px;
+}
+.about .contentBx h3{
+    font-size: 2em;
+    font-weight: 700;
+    color: #fff;
+}
+.about .contentBx p{
+    max-width: 600px;
+    padding-top: 10px;
+    text-align: justify;
+    color: #dbd9d9;
+}
+
+/* daftar */
+.background{
+    background-color: #000;
+    width: 100%;
+    height: 200%;
+    margin-top: -40px;
+    border-bottom:  2px solid #fff ;
+}
+.daftar{
+    padding: 0px 100px;
+    width: 80%;
+    min-height: 100vh;
+    margin: 40px auto;
+}
+.daftar h2{
+    color: #fff;
+    padding: 40px ;
+    padding-top: 60px;
+}
+.daftar ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.daftar ul li{
+    list-style: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 5px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    color: #fff;
+}
+.daftar ul li.active{
+    background-color: #1aeeef;
+    color: #050e2d;
+    box-shadow: 0 0 10px #1aeeef;
+}
+.daftar .cardBx{
+    width: 1000px;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.daftar .cardBx .card{
+    width: 280px;
+    border-radius: 10px;
+    margin: 20px;
+    background: #1b2143;
+    overflow: hidden;
+}
+.daftar .cardBx .card img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+.daftar .cardBx .card .content{
+    padding: 10px;
+}
+.daftar .cardBx .card .content h4{
+    color: #fff;
+    margin: 15px 0;
+}
+.daftar .cardBx .card p{
+    font-size: 15px;
+    margin-bottom: -5px;
+}
+.daftar .cardBx .card .info{
+    border-top: 2px solid #35407e;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+/* kontak */
+.judul{
+    background-image:linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(gambar/background.png);
+    background-size: cover;
+}
+.judul h1{
+    padding-left: 42%;
+    padding-top: 60px;
+}
+.kontak{
+    padding: 20px 100px;
+    width: 174vh;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+}
+.kontak img{
+    height: 50%;
+    width: 50%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.kontak .form{
+    width: 50%;
+    margin: 30px;
+}
+.kontak .form h1{
+    color: #fff;
+}
+.kontak p{
+    margin-bottom:1px;
+    padding-top:30px;
+    z-index: 3;
+}
+.kontak .form .inputBx{
+    margin: 10px 0;
+}
+.kontak .form .inputBx p{
+    color: #fff;
+}
+.kontak .form .inputBx input,
+.kontak .form .inputBx textarea{
+    border: none;
+    outline: none;
+    padding: 15px;
+    width: 100%;
+    color: #fff;
+    background: #1b2143;
+    min-height: 15px;
+    font-size: 1.1em;
+    border-radius: 10px;
+}
+.kontak .form .inputBx textarea{
+    height: 150px;
+}
+.kontak .form .inputBx button:hover{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px 0;
+    outline: none;
+    background: transparent;
+    border: 1px solid #1aeeef;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    color: #fff;
+    letter-spacing: 1;
+}
+.kontak .form .inputBx button{
+    border: none;
+    outline: none;
+    padding: 15px;
+    width: 562px;
+    color: #fff;
+    background: #1b2143;
+    min-height: 15px;
+    font-size: 1.1em;
+    border-radius: 10px;
+}
+
+/* footer */
+footer{
+    background-color: #000;
+    height: auto;
+    width: 99.vw;
+    font-family: "Open Sans";
+    padding-top: 40px;
+    color: #fff;
+}
+.footer-atas{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3 rem 0;
+    
+}
+.footer-atas li{
+    margin: 0 10px;
+} 
+
+.footer-bawah{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-bawah h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer-bawah p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+
